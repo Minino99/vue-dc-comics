@@ -2,16 +2,18 @@
   <div>
       <TheNavbar />
       <BannerBlue />
+      <TheFooter />
   </div>
 </template>
 
 <script>
 import TheNavbar from "./components/TheNavbar.vue";
 import BannerBlue from "./components/BannerBlue.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
   name: "App",
-  components: { TheNavbar, BannerBlue },
+  components: { TheNavbar, BannerBlue, TheFooter },
 };
 </script>
 
