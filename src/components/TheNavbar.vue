@@ -1,19 +1,23 @@
 <template>
   <div>
-    <nav class="navbar navbar-light justify-content-between align-items-center">
-      <div class="navbar-brand">
-        <a><img src="../assets/img/dc-logo.png" alt="DC Logo" srcset="" /></a>
-      </div>
-      <div class="d-flex gap-4 navelements">
-        <div
-          class="dcnavelement"
-          v-for="navelement in navElements"
-          :key="navelement.name"
-        >
-          <a :href="navelement.link">{{ navelement.name }}</a>
+    <div class="container">
+      <nav
+        class="navbar navbar-light justify-content-between align-items-center"
+      >
+        <div class="navbar-brand">
+          <a><img src="../assets/img/dc-logo.png" alt="DC Logo" srcset="" /></a>
         </div>
-      </div>
-    </nav>
+        <div class="d-flex gap-4 navelements">
+          <div
+            class="dcnavelement"
+            v-for="navelement in navElements"
+            :key="navelement.name"
+          >
+            <a :href="navelement.link">{{ navelement.name }}</a>
+          </div>
+        </div>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -94,12 +98,12 @@ export default {
       border-bottom: solid 5px #0081ef;
     }
 
-    &:hover a{
+    &:hover a {
       color: #0081ef;
     }
 
-    a{
-     color: black;
+    a {
+      color: black;
       text-decoration: none;
     }
   }

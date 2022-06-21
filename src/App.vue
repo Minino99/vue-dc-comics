@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div class="container">
       <TheNavbar />
-    </div>
+      <BannerBlue />
   </div>
 </template>
 
 <script>
 import TheNavbar from "./components/TheNavbar.vue";
+import BannerBlue from "./components/BannerBlue.vue";
 
 export default {
   name: "App",
-  components: { TheNavbar },
+  components: { TheNavbar, BannerBlue },
 };
 </script>
 
