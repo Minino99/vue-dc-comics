@@ -2,9 +2,22 @@
   <div>
     <div class="footercontainer">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex flex-column">we</div>
-          <div><img src="../assets/img/dc-logo-bg.png" alt="" srcset="" /></div>
+        <div class="d-flex justify-content-between h-100">
+          <div class="d-flex gap-5 py-5 footerlinks">
+            <div
+              class="footerelement"
+              v-for="elemento in footerElements"
+              :key="elemento"
+            >
+              <div class="title pb-2">{{ elemento.title }}</div>
+              <div class="text" v-for="(link, i) in elemento.links" :key="i">
+                {{ link }}
+              </div>
+            </div>
+          </div>
+          <div class="of-hidden">
+            <img src="../assets/img/dc-logo-bg.png" alt="" srcset="" />
+          </div>
         </div>
       </div>
     </div>
@@ -14,21 +27,87 @@
 <script>
 export default {
   name: "TheFooter",
+  data: function () {
+    return {
+      footerElements: [
+        {
+          title: "DC COMICS",
+          links: [
+            "Characters",
+            "Comics",
+            "Movies",
+            "TV",
+            "Games",
+            "Videos",
+            "News",
+          ],
+        },
+        {
+          title: "DC",
+          links: [
+            "Terms Of Use",
+            "Privacy Policy (New)",
+            "Ad Choices",
+            "Advertising",
+            "Jobs",
+            "Subscriptions",
+            "Talent Workshps",
+            "CPSC Certificates",
+            "Ratings",
+            "Shop Help",
+            "Contact Us",
+          ],
+        },
+        {
+          title: "SITES",
+          links: [
+            "DC",
+            "MAD Magazine",
+            "DC Kids",
+            "DC Universe",
+            "DC Power Visa",
+          ],
+        },
+        {
+          title: "SHOP",
+          links: ["Shop DC", "Shop DC Collectibles"],
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss">
+.text {
+  color: #494949;
+  font-size: 0.8rem;
+}
+
+.title {
+  color: white;
+  font-size: 1.2rem;
+}
+
 .footercontainer {
   height: 360px;
   background-image: url("../assets/img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+
+  .container {
+    height: 100%;
+  }
 
   img {
-   position: relative;
-   transform: translateY(-20%);
+    position: relative;
+    transform: translateY(-20%);
     text-align: center;
+  }
+
+  .of-hidden {
+    max-height: 100%;
+    overflow: hidden;
   }
 }
 </style>
