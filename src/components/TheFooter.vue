@@ -3,7 +3,7 @@
     <div class="footercontainer">
       <div class="container">
         <div class="d-flex justify-content-between h-100">
-          <div class="d-flex gap-5 py-5 footerlinks">
+          <div class="d-flex flex-column flex-wrap gap-3 py-5 footerlinks">
             <div
               class="footerelement"
               v-for="elemento in footerElements"
@@ -43,6 +43,10 @@ export default {
           ],
         },
         {
+          title: "SHOP",
+          links: ["Shop DC", "Shop DC Collectibles"],
+        },
+        {
           title: "DC",
           links: [
             "Terms Of Use",
@@ -67,10 +71,6 @@ export default {
             "DC Universe",
             "DC Power Visa",
           ],
-        },
-        {
-          title: "SHOP",
-          links: ["Shop DC", "Shop DC Collectibles"],
         },
       ],
     };
