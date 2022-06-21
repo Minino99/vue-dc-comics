@@ -3,8 +3,9 @@
     <div class="container">
       <nav
         class="navbar navbar-light justify-content-between align-items-center"
+        style="padding-bottom: 0px; padding-top: 0px"
       >
-        <div class="navbar-brand">
+        <div class="navbar-brand py-2">
           <a><img src="../assets/img/dc-logo.png" alt="DC Logo" srcset="" /></a>
         </div>
         <div class="d-flex gap-4 navelements">
@@ -76,6 +77,7 @@ export default {
 <style lang="scss">
 .navbar {
   height: 100px;
+
   .navbar-brand {
     height: 100%;
   }

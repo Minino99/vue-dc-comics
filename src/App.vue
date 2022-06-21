@@ -3,6 +3,7 @@
       <TheNavbar />
       <BannerBlue />
       <TheFooter />
+      <BannerSignUp />
   </div>
 </template>
 
@@ -10,10 +11,11 @@
 import TheNavbar from "./components/TheNavbar.vue";
 import BannerBlue from "./components/BannerBlue.vue";
 import TheFooter from "./components/TheFooter.vue";
+import BannerSignUp from "./components/BannerSignUp.vue";
 
 export default {
   name: "App",
-  components: { TheNavbar, BannerBlue, TheFooter },
+  components: { TheNavbar, BannerBlue, TheFooter, BannerSignUp },
 };
 </script>
 
