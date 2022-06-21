@@ -1,14 +1,12 @@
 <template>
-<div>hello</div>
+  <div></div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: 'TheNavbar',
   components: {}
 }
 </script>
 
-<style lang="scss">
-</style>
+<style></style>
