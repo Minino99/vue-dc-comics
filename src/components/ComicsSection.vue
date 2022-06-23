@@ -5,8 +5,8 @@
         <div class="row h-100">
           <div class="col lg-2" v-for="comic in Comics" :key="comic.series">
             <div class="squareimg mb-3">
-              <a href="#"
-                ><img :src="comic.thumb" :alt="comic.series" srcset=""
+              <a href="#" @click="ClickComic(comic)">
+              <img :src="comic.thumb" :alt="comic.series" srcset=""
               /></a>
             </div>
             <div class="comicname">{{ comic.series.toUpperCase() }}</div>
@@ -27,6 +27,7 @@ export default {
   name: "ComicsSection",
   data: function () {
     return {
+      ClickedComic: "https://images4.alphacoders.com/646/thumb-1920-646026.jpg",
       Comics: [
         {
           thumb:
@@ -34,6 +35,7 @@ export default {
           price: "$19.99",
           series: "Action Comics",
           type: "comic book",
+          bg: "https://images.wallpapersden.com/image/download/superman-action-comics-dc-comics_ZmVpa26UmZqaraWkpJRmbmdlrWZlbWU.jpg",
         },
         {
           thumb:
@@ -41,6 +43,7 @@ export default {
           price: "$3.99",
           series: "American Vampire 1976",
           type: "comic book",
+          bg: "https://images.hdqwalls.com/download/american-vampire-1976-sz-1920x1080.jpg",
         },
         {
           thumb:
@@ -48,6 +51,7 @@ export default {
           price: "$16.99",
           series: "Aquaman",
           type: "graphic novel",
+          bg: "https://images7.alphacoders.com/973/973272.jpg",
         },
         {
           thumb:
@@ -55,6 +59,7 @@ export default {
           price: "$2.99",
           series: "Batgirl",
           type: "comic book",
+          bg: "https://images4.alphacoders.com/164/thumb-1920-164246.jpg",
         },
         {
           thumb:
@@ -62,6 +67,7 @@ export default {
           price: "$3.99",
           series: "Batman",
           type: "comic book",
+          bg: "https://wallpaperaccess.com/full/525044.jpg",
         },
         {
           thumb:
@@ -69,6 +75,7 @@ export default {
           price: "$2.99",
           series: "Batman Beyond",
           type: "comic book",
+          bg: "https://images.alphacoders.com/807/thumb-1920-807852.jpg",
         },
         {
           thumb:
@@ -76,6 +83,7 @@ export default {
           price: "$3.99",
           series: "Batman/Superman",
           type: "comic book",
+          bg:"https://images3.alphacoders.com/103/thumb-1920-1033030.jpg",
         },
         {
           thumb:
@@ -83,6 +91,7 @@ export default {
           price: "$4.99",
           series: "Batman/Superman Annual",
           type: "comic book",
+          bg:"https://p4.wallpaperbetter.com/wallpaper/996/740/36/batman-and-superman-batman-and-superman-wallpaper-preview.jpg",
         },
         {
           thumb:
@@ -90,6 +99,7 @@ export default {
           price: "$5.99",
           series: "Batman: The Joker War Zone",
           type: "comic book",
+          bg: "https://www.dccomics.com/sites/default/files/Gallery_20200930_Batman_JokerWarZone_Variant_5f627728d05877.02872275.jpg",
         },
         {
           thumb:
@@ -97,6 +107,7 @@ export default {
           price: "$6.99",
           series: "Batman: Three Jokers",
           type: "comic book",
+          bg: "https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2020/08/3-joker-1920x1080-1.jpg?ssl=1",
         },
         {
           thumb:
@@ -104,6 +115,7 @@ export default {
           price: "$4.99",
           series: "Batman: White Knight Presents: Harley Quinn",
           type: "comic book",
+          bg: "https://images5.alphacoders.com/872/872431.jpg",
         },
         {
           thumb:
@@ -111,9 +123,15 @@ export default {
           price: "$16.99",
           series: "Catwoman",
           type: "graphic novel",
+          bg: "https://images.alphacoders.com/871/871607.jpg",
         },
       ],
     };
+  },
+  methods: {
+    ClickComic(comic) {
+      this.ClickedComic = comic.bg;
+    },
   },
 };
 </script>

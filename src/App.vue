@@ -2,7 +2,7 @@
   <div>
     <TheNavbar />
     <TheJumbotron />
-    <ComicsSection />
+    <ComicsSection :jumbo-img="ClickedComic" />
     <BannerBlue />
     <TheFooter />
     <BannerSignUp />
@@ -20,6 +20,7 @@ import BannerSignUp from "./components/BannerSignUp.vue";
 export default {
   name: "App",
   components: { TheNavbar, TheJumbotron, ComicsSection, BannerBlue, TheFooter, BannerSignUp, },
+  
 };
 </script>
 
