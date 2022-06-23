@@ -29,7 +29,7 @@ export default {
  overflow: hidden;
  img{
    width: 100%;
-   transform: translateY(-20%);
+   transform: translateY(-15%);
  }
 }
 

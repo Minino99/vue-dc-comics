@@ -1,22 +1,20 @@
 <template>
   <div>
-        <TheJumbotron :jumbo-img="ClickedComic"/>
+    <TheJumbotron :jumbo-img="ClickedComic" />
     <div class="comicssection">
       <div class="container h-100 p-4 py-5">
         <div class="row h-100">
           <div class="col lg-2" v-for="comic in Comics" :key="comic.series">
             <div class="squareimg mb-3">
               <a href="#" @click="ClickComic(comic)">
-              <img :src="comic.thumb" :alt="comic.series" srcset=""
+                <img :src="comic.thumb" :alt="comic.series" srcset=""
               /></a>
             </div>
             <div class="comicname">{{ comic.series.toUpperCase() }}</div>
           </div>
         </div>
         <div class="mt-4 mb-0 text-center">
-            <button type="button" class="btn mybtn btn-lg px-5">
-              LOAD MORE
-            </button>
+          <button type="button" class="btn mybtn btn-lg px-5">LOAD MORE</button>
         </div>
       </div>
     </div>
@@ -38,7 +36,7 @@ export default {
           price: "$19.99",
           series: "Action Comics",
           type: "comic book",
-          bg: "https://images.wallpapersden.com/image/download/superman-action-comics-dc-comics_ZmVpa26UmZqaraWkpJRmbmdlrWZlbWU.jpg",
+          bg: "https://i.pinimg.com/originals/00/85/ca/0085cad2084f45c59a451a7ecf588331.jpg",
         },
         {
           thumb:
@@ -86,7 +84,7 @@ export default {
           price: "$3.99",
           series: "Batman/Superman",
           type: "comic book",
-          bg:"https://images3.alphacoders.com/103/thumb-1920-1033030.jpg",
+          bg: "https://images3.alphacoders.com/103/thumb-1920-1033030.jpg",
         },
         {
           thumb:
@@ -94,7 +92,7 @@ export default {
           price: "$4.99",
           series: "Batman/Superman Annual",
           type: "comic book",
-          bg:"https://p4.wallpaperbetter.com/wallpaper/996/740/36/batman-and-superman-batman-and-superman-wallpaper-preview.jpg",
+          bg: "https://p4.wallpaperbetter.com/wallpaper/996/740/36/batman-and-superman-batman-and-superman-wallpaper-preview.jpg",
         },
         {
           thumb:
@@ -154,11 +152,11 @@ export default {
   height: 48px;
 }
 
-.mybtn{
+.mybtn {
   color: white;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 0;
-  background-color: #0081EF;
+  background-color: #0081ef;
 }
 </style>
