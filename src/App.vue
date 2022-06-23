@@ -1,8 +1,7 @@
 <template>
   <div>
     <TheNavbar />
-    <TheJumbotron />
-    <ComicsSection :jumbo-img="ClickedComic" />
+    <ComicsSection />
     <BannerBlue />
     <TheFooter />
     <BannerSignUp />
@@ -11,7 +10,6 @@
 
 <script>
 import TheNavbar from "./components/TheNavbar.vue";
-import TheJumbotron from "./components/TheJumbotron.vue";
 import ComicsSection from "./components/ComicsSection.vue";
 import BannerBlue from "./components/BannerBlue.vue";
 import TheFooter from "./components/TheFooter.vue";
@@ -19,7 +17,7 @@ import BannerSignUp from "./components/BannerSignUp.vue";
 
 export default {
   name: "App",
-  components: { TheNavbar, TheJumbotron, ComicsSection, BannerBlue, TheFooter, BannerSignUp, },
+  components: { TheNavbar, ComicsSection, BannerBlue, TheFooter, BannerSignUp, },
   
 };
 </script>

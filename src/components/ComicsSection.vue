@@ -1,5 +1,6 @@
 <template>
   <div>
+        <TheJumbotron :jumbo-img="ClickedComic"/>
     <div class="comicssection">
       <div class="container h-100 p-4 py-5">
         <div class="row h-100">
@@ -23,8 +24,10 @@
 </template>
 
 <script>
+import TheJumbotron from "./TheJumbotron.vue";
 export default {
   name: "ComicsSection",
+  components: { TheJumbotron },
   data: function () {
     return {
       ClickedComic: "https://images4.alphacoders.com/646/thumb-1920-646026.jpg",
