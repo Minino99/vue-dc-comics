@@ -28,7 +28,7 @@ export default {
   components: { TheJumbotron },
   data: function () {
     return {
-      ClickedComic: "https://images4.alphacoders.com/646/thumb-1920-646026.jpg",
+      ClickedComic: "img/jumbotron.jpg",
       Comics: [
         {
           thumb:
@@ -146,6 +146,10 @@ export default {
   width: 192px;
   height: 192px;
   overflow: hidden;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .comicname {
   color: white;

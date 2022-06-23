@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss" scoped>
 .jumbocontainer {
- height: 360px;
+ height: 400px;
 }
 
 .jumboimg{
