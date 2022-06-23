@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .bannersignupcontainer {
   background-color: #282828;
   height: 100px;

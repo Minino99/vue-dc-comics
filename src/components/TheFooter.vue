@@ -7,7 +7,7 @@
             <div
               class="footerelement"
               v-for="elemento in footerElements"
-              :key="elemento"
+              :key="elemento.title"
             >
               <div class="title pb-2">{{ elemento.title }}</div>
               <div class="text" v-for="(link, i) in elemento.links" :key="i">
@@ -78,7 +78,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .text {
   color: #494949;
   font-size: 0.8rem;

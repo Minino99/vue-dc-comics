@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .bannerblue {
   background-color: #0081ef;
   color: white;
